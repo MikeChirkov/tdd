@@ -25,4 +25,8 @@ public class PhoneBook {
     public String findByNumber(String number) {
         return String.join(", ", numbers.get(number));
     }
+
+    public String findByName(String name) {
+        return null;
+    }
 }
