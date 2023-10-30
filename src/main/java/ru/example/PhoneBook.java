@@ -1,13 +1,11 @@
 package ru.example;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class PhoneBook {
     private final Map<String, List<String>> numbers = new HashMap<>();
-    private final Map<String, String> contacts = new HashMap<>();
+    private final SortedMap<String, String> contacts = new TreeMap<>();
 
     public int add(String name, String number) {
         if (!contacts.containsKey(name)) {
@@ -31,6 +29,6 @@ public class PhoneBook {
     }
 
     public String printAllNames() {
-        return null;
+        return String.join(", ", contacts.keySet());
     }
 }
