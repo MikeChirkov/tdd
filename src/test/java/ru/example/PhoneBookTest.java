@@ -20,4 +20,13 @@ class PhoneBookTest {
         String name = phoneBook.findByNumber("4321");
         assertEquals("Test2", name);
     }
+
+    @Test
+    void findByNumberMoreNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Test", "4321");
+        phoneBook.add("Test2", "4321");
+        String name = phoneBook.findByNumber("4321");
+        assertEquals("Test, Test2", name);
+    }
 }
