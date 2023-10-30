@@ -29,4 +29,8 @@ public class PhoneBook {
     public String findByName(String name) {
         return contacts.get(name);
     }
+
+    public String printAllNames() {
+        return null;
+    }
 }

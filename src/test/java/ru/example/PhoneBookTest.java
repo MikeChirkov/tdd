@@ -38,4 +38,16 @@ class PhoneBookTest {
         String number = phoneBook.findByName("Test");
         assertEquals("4321", number);
     }
+
+
+    @Test
+    void printAllNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Test4", "4321");
+        phoneBook.add("Test2", "4321");
+        phoneBook.add("Test1", "4321");
+        phoneBook.add("Test3", "4321");
+        String names = phoneBook.printAllNames();
+        assertEquals("Test1, Test2, Test3, Test4", names);
+    }
 }
