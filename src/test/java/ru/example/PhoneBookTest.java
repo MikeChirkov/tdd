@@ -8,8 +8,8 @@ class PhoneBookTest {
     @Test
     void add() {
         PhoneBook phoneBook = new PhoneBook();
-        phoneBook.add();
-        int count = phoneBook.add();
+        phoneBook.add("Test", "1234");
+        int count = phoneBook.add("Test2", "4321");
         assertEquals(2, count);
     }
 }
